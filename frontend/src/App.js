@@ -1,13 +1,13 @@
-import './App.css';
-import Canvas from './components/Canvas';
+import "./App.css";
+import Canvas from "./components/Canvas";
 import { CanvasProvider } from "./context/CanvasContext";
-import RightBar from './components/RightBar';
-import EditObj from './components/EditObj'
+import RightBar from "./components/RightBar";
+import EditObj from "./components/EditObj";
 import styled from "styled-components";
-import axios from 'axios';
+import axios from "axios";
 
-axios.defaults.headers.common['Access-Control-Allow-Origin'] = 'true';
-axios.defaults.baseURL = 'http://localhost:80/api/v1/';
+axios.defaults.headers.common["Access-Control-Allow-Origin"] = "true";
+axios.defaults.baseURL = "http://localhost:80/api/v1/";
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
           </header>
         </div>
         <MainSection>
-          <Canvas/>
+          <Canvas />
           <Menu>
-            <RightBar/>
-            <EditObj/>
+            <RightBar />
+            <EditObj />
           </Menu>
         </MainSection>
       </Wrapper>
@@ -34,14 +34,14 @@ export default App;
 
 const Wrapper = styled.div`
   margin: 50px;
-`
+`;
 
 const MainSection = styled.div`
   display: flex;
   flex-direction: row;
-`
+`;
 const Menu = styled.div`
   flex: 1;
   display: flex;
   flex-direction: row;
-`
+`;

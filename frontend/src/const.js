@@ -1,1 +1,1 @@
-export const navbar = 240
+export const navbar = 240;
