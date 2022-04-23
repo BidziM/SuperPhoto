@@ -47,8 +47,9 @@ export const CanvasProvider = ({ children }) => {
     //Create/place object on canvas with default propertys
     const placeDrawing = ({type}) => {
         if(!type) return
-        const x = (window.innerWidth - navbar) / 2
-        const y = (window.innerHeight - navbar) / 2
+        const canvas = canvRef.current
+        const x = canvas.width / 4
+        const y = canvas.height / 4
         contextRef.current.beginPath();
         contextRef.current.stroke();
         const itemProperty = {name:`Object${canvasItems.length}`,type, id:Math.random().toString(36).substr(2, 9), x:x,y:y, size:50}
